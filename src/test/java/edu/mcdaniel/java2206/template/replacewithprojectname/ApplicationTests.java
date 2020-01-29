@@ -10,7 +10,8 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		//We are testing to see if the spring boot application loads.  This will fail only if the spring boot
+		//We are testing to see if the spring boot application loads.
+		// This will fail only if the spring boot
 		// application fails to load. No need to add functionality here.
 	}
 
