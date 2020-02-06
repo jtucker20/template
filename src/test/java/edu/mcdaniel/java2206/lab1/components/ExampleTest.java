@@ -1,4 +1,4 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1.components;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExampleTest {
 
-    private Example exampleClass;
+    private Spiky exampleClass;
 
     @BeforeEach
     void setUp() {
 
-        exampleClass = new Example();
+        exampleClass = new Spiky();
 
     }
 

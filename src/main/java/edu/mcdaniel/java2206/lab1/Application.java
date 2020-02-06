@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname;
+package edu.mcdaniel.java2206.lab1;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Example;
+import edu.mcdaniel.java2206.lab1.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -56,9 +56,9 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Example exampleWithStandardGreeting = new Example();
+        Spiky exampleWithStandardGreeting = new Spiky();
 
-        Example exampleWithCustomGreeting = new Example()
+        Spiky exampleWithCustomGreeting = new Spiky()
                 .withGreeting("Greetings")
                 .withAudience("Earthlings");
 

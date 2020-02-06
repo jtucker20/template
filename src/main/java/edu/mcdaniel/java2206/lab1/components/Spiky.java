@@ -1,4 +1,4 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1.components;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
  * names to your class, add a reference to your new class and it's major functions in
  * the Application class and then do your coding here.
  */
-public class Example {
+public class Spiky {
 
     //=============================================================================================
     // Private Assets
@@ -40,7 +40,7 @@ public class Example {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-    public Example(){
+    public Spiky(){
         this.greeting = "Hello";
         this.audience = "World";
 
@@ -60,7 +60,7 @@ public class Example {
      * @param customGreeting the custom greeting to be used.
      * @return the Example object to allow chaining.
      */
-    public Example withGreeting(String customGreeting){
+    public Spiky withGreeting(String customGreeting){
 
         this.greeting = customGreeting;
 
@@ -75,7 +75,7 @@ public class Example {
      * @param customAudience the custom audience who will be addressed
      * @return the Example object to allow chaining.
      */
-    public Example withAudience(String customAudience){
+    public Spiky withAudience(String customAudience){
 
         this.audience = customAudience;
 
