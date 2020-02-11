@@ -19,12 +19,15 @@ public class Spiky {
     /**
      * This provides access to logging.
      */
-    private final Logger log;
+
 
     /**
      * This String variable will hold the greeting.
      */
-    private String greeting;
+
+    private int numberOfSpikes;
+    public static final String BACKSLASH = "\\";
+    public static final String FORWARDSLASH = "/";
 
     /**
      * This String variable will hold the name of the audience.
@@ -40,13 +43,17 @@ public class Spiky {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-    public Spiky(){
-        this.greeting = "Hello";
-        this.audience = "World";
+    public Spiky();
 
-        this.log = LogManager.getLogger(this);
+    {
+        this();
+    }
+    public Spiky(int numberOfSpikes){
+        this();
+        this.numberOfSpikes = numberOfSpikes;
+       //  this.Log = LogManager.getLogger(this);
 
-        log.debug("The output message is {} {}!", this.greeting, this.audience);
+       //  this.debug("The number of spikes will be {}.", this.numberOfSpikes
     }
 
 
@@ -54,37 +61,32 @@ public class Spiky {
     // Major Methods
     //=============================================================================================
 
-    /**
-     * This single argument method is designed to initialize the greeting to the value
-     * supplied in the customGreeting variable.
-     * @param customGreeting the custom greeting to be used.
-     * @return the Example object to allow chaining.
-     */
-    public Spiky withGreeting(String customGreeting){
-
-        this.greeting = customGreeting;
-
-        log.debug("The greeting was changed to: {}", this.greeting);
-
-        return this;
+    public String oneLine(int numSpaces, int numSpikes) {
+        String result = "";
+        for (int i = 0; i < numSpaces; i++) {
+            result = result + " ";
+        }
+        for (int i = 0; i < numSpikes; i++) {
+            result = result + BACKSLASH;
+        }
+        for (int i = 0; i < numSpikes; i++) {
+            result = result + FORWARDSLASH;
+        }
+        return result;
     }
-
-    /**
-     * This single argument method is designed to initialize the audience to the value
-     * supplied in the customAudience variable.
-     * @param customAudience the custom audience who will be addressed
-     * @return the Example object to allow chaining.
-     */
-    public Spiky withAudience(String customAudience){
-
-        this.audience = customAudience;
-
-        log.debug("The audience was changed to: {}", this.audience);
-
-        return this;
-    }
-
-
+     public String oneLineBackwards(int numSpaces, int numSpikes){
+        String result = "";
+        for(int i = 0; i < numSpaces; i++){
+           result = result + " ";
+        }
+        for(int i = 0; i < numSpikes; i++){
+            result = result + FORWARDSLASH;
+        }
+        for(int i = 0; i < numSpikes; i++){
+            result = result + BACKSLASH;
+        }
+        return result;
+     }
     //=============================================================================================
     // Minor Methods(s)
     //=============================================================================================

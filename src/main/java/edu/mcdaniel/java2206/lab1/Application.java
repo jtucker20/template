@@ -58,11 +58,39 @@ public class Application {
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
         Spiky exampleWithStandardGreeting = new Spiky();
 
-        Spiky exampleWithCustomGreeting = new Spiky()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
+        Spiky exampleWithCustomGreeting = new Spiky();
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
+        /*//==========================================================================================================//
+        * Step One of the Lab
+        *///==========================================================================================================//
+
+        System.out.println("  \\/  ");
+        System.out.println(" \\\\// ");
+        System.out.println("\\\\\\///");
+        System.out.println("///\\\\\\");
+        System.out.println(" //\\\\");
+        System.out.println("  /\\  ");
+
+        /*//==========================================================================================================//
+        * Step Two of the Lab, Example name "Misp"
+        *///==========================================================================================================//
+
+        System.out.println("M     M    IIIII     SSSSS     PPPPPP");
+        System.out.println("MM   MM      I      S     S    P     P");
+        System.out.println("M M M M      I      S          P     P");
+        System.out.println("M  M  M      I       SSSS      PPPPPP");
+        System.out.println("M     M      I            S    P");
+        System.out.println("M     M      I            S    P");
+        System.out.println("M     M    IIIII     SSSSS     P");
+
+        System.out.println(" CCCCC     OOOO     L       L     IIIII     NN     N");
+        System.out.println("C     C   O    O    L       L       I       N N    N");
+        System.out.println("C         O    O    L       L       I       N  N   N");
+        System.out.println("C         O    O    L       L       I       N   N  N");
+        System.out.println("C     C   O    O    L       L       I       N    N N");
+        System.out.println(" CCCCC     OOOO     LLLLL  LLLLL  IIIII     N     NN");
+
         System.out.println(exampleWithStandardGreeting.getMessage());
 
         System.out.println(exampleWithCustomGreeting.getMessage());
