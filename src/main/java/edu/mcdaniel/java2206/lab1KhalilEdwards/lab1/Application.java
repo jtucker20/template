@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname;
+package edu.mcdaniel.java2206.lab1KhalilEdwards.lab1;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Example;
+import edu.mcdaniel.java2206.lab1KhalilEdwards.lab1.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -56,16 +56,32 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Example exampleWithStandardGreeting = new Example();
 
-        Example exampleWithCustomGreeting = new Example()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
+
+        Spiky spiky = new Spiky(10);
+        spiky.showSpikes();
+
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(exampleWithStandardGreeting.getMessage());
 
-        System.out.println(exampleWithCustomGreeting.getMessage());
+
+
+        //This is step two of the lab
+        System.out.println("K       K   H       H               A                L         I I I I I I     L");
+        System.out.println("K      K    H       H              A A               L              I          L");
+        System.out.println("K     K     H       H             A   A              L              I          L");
+        System.out.println("K    K      H       H            A     A             L              I          L");
+        System.out.println("K   K       H       H           A       A            L              I          L");
+        System.out.println("K  K        H       H          A         A           L              I          L");
+        System.out.println("K K         H H H H H         A A A A A A A          L              I          L");
+        System.out.println("K  K        H       H        A             A         L              I          L");
+        System.out.println("K   K       H       H       A               A        L              I          L");
+        System.out.println("K    K      H       H      A                 A       L              I          L");
+        System.out.println("K     K     H       H     A                   A      L              I          L");
+        System.out.println("K      K    H       H    A                     A     L              I          L");
+        System.out.println("K       K   H       H   A                       A    L L L L L  I I I I I I    L L L L L");
+
+
 
     }
 
