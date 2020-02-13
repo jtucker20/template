@@ -80,8 +80,21 @@ public class Spiky {
         return result;
 
         }
+    public String oneLineBackwards(int numSpaces, int numSpikes){
+        String result = " ";
+        for (int i = 0; i < numSpaces; i++) {
+            result = result + " ";
+        }
+        for(int i = o; i < numSpikes; i ++) {
+            result = result + FORWARDSLASH;
+        }
+        for(int i + 0; i < numSpikes; i++){
 
-    //=============================================================================================
+
+
+        }
+    }
+     //=============================================================================================
     // Getters and Setters
     //=============================================================================================
 
