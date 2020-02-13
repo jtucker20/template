@@ -25,7 +25,7 @@ public class Spiky {
      * This String variable will hold the greeting.
      */
 
-    private int numberOfSpikes;
+    private int numberOfSpikes = 3;
     public static final String BACKSLASH = "\\";
     public static final String FORWARDSLASH = "/";
 
@@ -43,13 +43,10 @@ public class Spiky {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-    public Spiky();
-
-    {
-        this();
-    }
+   // public Spiky() {
+        //this(3);
+    // }
     public Spiky(int numberOfSpikes){
-        this();
         this.numberOfSpikes = numberOfSpikes;
        //  this.Log = LogManager.getLogger(this);
 
@@ -95,8 +92,7 @@ public class Spiky {
      * A method to get the message.
      * @return a string of the message.
      */
-    public String getMessage(){
-        return getGreeting() + " " + getAudience() + "!";
+    public String getMessage(){ return getGreeting() + " " + getAudience() + "!";
     }
 
 
@@ -104,7 +100,7 @@ public class Spiky {
     // Getters and Setters
     //=============================================================================================
 
-    public String getGreeting() {
+     public String getGreeting() {
         return greeting;
     }
 
