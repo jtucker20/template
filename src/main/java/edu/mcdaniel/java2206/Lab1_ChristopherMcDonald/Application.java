@@ -60,6 +60,9 @@ public class Application {
         spiky.showSpikes();
         spiky.showNSpikes(8);
 
+        spiky.setNumberOfSpikes(5);
+        spiky.showSpikes();
+
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
         System.out.println("  \\/\n \\\\//\n\\\\\\///\n///\\\\\\\n //\\\\\n  /\\");
