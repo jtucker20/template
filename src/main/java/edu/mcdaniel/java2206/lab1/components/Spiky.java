@@ -55,7 +55,7 @@ public class Spiky {
         this.numberOfSpikes = numberOfSpikes;
         this.log = LogManager.getLogger(this);
 
-        log.debug("The number of spikes will be {}, ", this.numberOfSpikes;
+        log.debug("The number of spikes will be {}, ", this.numberOfSpikes);
     }
 
 
@@ -90,6 +90,9 @@ public class Spiky {
         }
         for(int i + 0; i < numSpikes; i++){
             result = result + BACKSLASH;
+
+        }
+        return result;
 
 
 
