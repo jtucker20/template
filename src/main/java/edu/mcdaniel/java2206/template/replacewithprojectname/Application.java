@@ -58,7 +58,7 @@ public class Application {
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
         Example exampleWithStandardGreeting = new Example();
 
-        //Hi
+        //Hi this is a change
         Example exampleWithCustomGreeting = new Example()
                 .withGreeting("Greetings")
                 .withAudience("Earthlings");
