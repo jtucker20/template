@@ -1,4 +1,4 @@
-# template
+# LAB 1
 The template to be used to start a project.
 
 ##THIS TEMPLATE FILE MUST BE UPDATED FOR EVERY SINGLE PROJECT WITH:

@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname;
+package edu.mcdaniel.java2206.Lab1_ChristopherMcDonald;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Example;
+import edu.mcdaniel.java2206.Lab1_ChristopherMcDonald.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,10 +28,6 @@ public class Application {
     /**
      * The constructor for the Spring Boot application
      */
-    public Application(){
-        //This constructor is empty as no additional information need be provided.
-        //This is an implemented No Argument Constructor.
-    }
 
 
     //=============================================================================================
@@ -56,16 +52,24 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Example exampleWithStandardGreeting = new Example();
+        Spiky spiky = new Spiky(10);
 
-        Example exampleWithCustomGreeting = new Example()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
+        String[] topSpikes = spiky.topSpikes();
+        String[] bottomSpikes = spiky.bottomSpikes();
+
+        spiky.showSpikes();
+        spiky.set
+
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(exampleWithStandardGreeting.getMessage());
+        System.out.println("  \\/\n \\\\//\n\\\\\\///\n///\\\\\\\n //\\\\\n  /\\");
 
-        System.out.println(exampleWithCustomGreeting.getMessage());
+        System.out.println(" CCC  H  H  RRR   III  SSS\n" +
+                           "C     H  H  R  R   I   S  \n" +
+                           "C     HHHH  RRR    I   SSS\n" +
+                           "C     H  H  R R    I     S\n" +
+                           " CCC  H  H  R  R  III  SSS\n");
+
 
     }
 
