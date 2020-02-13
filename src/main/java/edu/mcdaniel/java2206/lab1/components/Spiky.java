@@ -1,4 +1,4 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1.components;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,8 @@ import org.apache.logging.log4j.Logger;
  * names to your class, add a reference to your new class and it's major functions in
  * the Application class and then do your coding here.
  */
-public class Example {
+public class Spiky
+{
 
     //=============================================================================================
     // Private Assets
@@ -24,7 +25,9 @@ public class Example {
     /**
      * This String variable will hold the greeting.
      */
-    private String greeting;
+    private int numberOfSpikes;
+    public static final String BACKSLASH = "\\";
+    public static final String FORWARDSLASH = "/";
 
     /**
      * This String variable will hold the name of the audience.
@@ -40,15 +43,18 @@ public class Example {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-    public Example(){
-        this.greeting = "Hello";
-        this.audience = "World";
-
-        this.log = LogManager.getLogger(this);
-
-        log.debug("The output message is {} {}!", this.greeting, this.audience);
+    public Spiky()
+    {
+       this(3);
     }
 
+    public Spiky(int numberOfSpikes)
+    {
+        this.numberOfSpikes = numberOfSpikes;
+        this.log = LogManager.getLogger(this);
+
+        log.debug("The number of spikes will be {}", this.numberOfSpikes);
+    }
 
     //=============================================================================================
     // Major Methods
@@ -58,9 +64,10 @@ public class Example {
      * This single argument method is designed to initialize the greeting to the value
      * supplied in the customGreeting variable.
      * @param customGreeting the custom greeting to be used.
-     * @return the Example object to allow chaining.
+     * @return the Lab1Class object to allow chaining.
      */
-    public Example withGreeting(String customGreeting){
+    public Spiky withGreeting(String customGreeting)
+    {
 
         this.greeting = customGreeting;
 
@@ -73,9 +80,10 @@ public class Example {
      * This single argument method is designed to initialize the audience to the value
      * supplied in the customAudience variable.
      * @param customAudience the custom audience who will be addressed
-     * @return the Example object to allow chaining.
+     * @return the Lab1Class object to allow chaining.
      */
-    public Example withAudience(String customAudience){
+    public Spiky withAudience(String customAudience)
+    {
 
         this.audience = customAudience;
 
@@ -89,13 +97,53 @@ public class Example {
     // Minor Methods(s)
     //=============================================================================================
 
-    /**
-     * A method to get the message.
-     * @return a string of the message.
-     */
-    public String getMessage(){
-        return getGreeting() + " " + getAudience() + "!";
+    public String oneLineForward(int numSpaces, int numSpikes)
+    {
+        String result = "";
+        for(int i = 0; i < numSpaces; i++)
+            result = result + "  ";
+        for(int i = 0; i < numSpikes; i++)
+            result = result + BACKSLASH;
+        for(int i = 0; i < numSpikes; i++)
+            result = result + FORWARDSLASH;
+
+        return result;
     }
+
+    public String oneLineBackward(int numSpaces, int numSpikes)
+    {
+        String result = "";
+        for(int i = 0; i < numSpaces; i++)
+            result = result + "  ";
+        for(int i = 0; i < numSpikes; i++)
+            result = result + FORWARDSLASH;
+        for(int i = 0; i < numSpikes; i++)
+            result = result + BACKSLASH;
+        return result;
+    }
+
+    public void showSpikes
+    {
+
+
+
+
+
+    }
+
+
+
+
+    public int getNumberOfSpikes
+    {
+        return numberOfSpikes;
+    }
+
+    public void setNumberOfSpikes
+    {
+        this.numberOfSpikes = numberOfSpikes;
+    }
+
 
 
     //=============================================================================================
