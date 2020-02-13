@@ -5,9 +5,9 @@ plugins {
     id 'idea'
 }
 
-group = 'edu.mcdaniel.java2206.template'
+group = 'edu.mcdaniel.java2206.lab1_Andre'
 version = '0.0.1'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
 
 repositories {
     mavenCentral()

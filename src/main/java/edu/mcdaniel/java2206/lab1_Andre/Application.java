@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname;
+package edu.mcdaniel.java2206.lab1_Andre;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Example;
+import edu.mcdaniel.java2206.lab1_Andre.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +15,7 @@ public class Application {
     // Private Assets
     //=============================================================================================
 
+
     /**
      * The logging mechanism of the class.
      */
@@ -28,18 +29,15 @@ public class Application {
     /**
      * The constructor for the Spring Boot application
      */
-    public Application(){
+
         //This constructor is empty as no additional information need be provided.
         //This is an implemented No Argument Constructor.
-    }
+
 
 
     //=============================================================================================
     // Major Methods
     //=============================================================================================
-
-    //No major methods to implement
-
 
     //=============================================================================================
     // PSVM
@@ -56,16 +54,43 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Example exampleWithStandardGreeting = new Example();
-
-        Example exampleWithCustomGreeting = new Example()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(exampleWithStandardGreeting.getMessage());
 
-        System.out.println(exampleWithCustomGreeting.getMessage());
+
+        System.out.println("  \\/");
+        System.out.println(" \\\\//");
+        System.out.println("\\\\\\///");
+        System.out.println("///\\\\\\");
+        System.out.println(" //\\\\");
+        System.out.println("  /\\");
+
+        System.out.println(" "); //Space between outputs
+
+        System.out.println("      A         N           N   D D        RRRRRRR    EEEEEEEEEE    ");
+        System.out.println("   A     A      NN          N   D    D     R      R   E             ");
+        System.out.println(" A         A    N N         N   D     D    R       R  E             ");
+        System.out.println("A           A   N  N        N   D      D   R       R  E             ");
+        System.out.println("A           A   N   N       N   D      D   R       R  E             ");
+        System.out.println("A           A   N    N      N   D      D   R      R   E             ");
+        System.out.println("AAAAAAAAAAAAA   N     N     N   D      D   RRRRRRR    EEEEEEEEEE    ");
+        System.out.println("A           A   N      N    N   D      D   R      R   E             ");
+        System.out.println("A           A   N       N   N   D      D   R       R  E             ");
+        System.out.println("A           A   N        N  N   D      D   R       R  E             ");
+        System.out.println("A           A   N         N N   D     D    R       R  E             ");
+        System.out.println("A           A   N          NN   D    D     R       R  E             ");
+        System.out.println("A           A   N           N   D D        R       R  EEEEEEEEEE    ");
+
+        Spiky spiky = new Spiky();
+
+        spiky.setNumberOfSpikes(10);
+
+        spiky.showSpikes(10);
+
+        spiky.setNumberOfSpikes(0);
+
+
+
 
     }
 

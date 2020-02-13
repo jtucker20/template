@@ -1,29 +1,29 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1_Andre.components;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ExampleTest {
+class SpikyTest {
 
-    private Example exampleClass;
+    private Spiky spikyClass;
 
     @BeforeEach
     void setUp() {
 
-        exampleClass = new Example();
+        spikyClass = new Spiky();
 
     }
 
     @Test
-    void getMessage() {
+    void bottomSpike() {
 
         // Arrange
-        String expected = "Hello World!";
+        String expected = "   ";
 
         // Act
-        String actual = exampleClass.getMessage();
+        String actual = "";
 
         // Assert
         assertEquals(expected, actual);
