@@ -1,5 +1,6 @@
 package edu.mcdaniel.java2206.Lab1_ChristopherMcDonald.components;
 
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,22 +18,78 @@ class SpikyTest {
     }
 
     @Test
-    void testSpaceFunctionality
+    void testSpaceFunctionality() {
+
+        // Arrange
+        String expected = "   ";
+
+        // Act
+        String actual = spikyClass.oneLineForward(3,0);
+
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    void oneLineBackward() {
+    void testSpaceFunctionality2sp1spk() {
+
+        // Arrange
+        String expected = "  /\\";
+
+        // Act
+        String actual = spikyClass.oneLineForward(2,1);
+
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    void oneLineForward() {
+    void testSpaceFunctionality1sp2spk() {
+
+        // Arrange
+        String expected = " //\\\\";
+
+        // Act
+        String actual = spikyClass.oneLineForward(1,2);
+
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    void topSpikes() {
+    void testSpaceFunctionality0sp3spk() {
+
+        // Arrange
+        String expected = "///\\\\\\";
+
+        // Act
+        String actual = spikyClass.oneLineForward(0,3);
+
+        // Assert
+        assertEquals(expected, actual);
     }
 
     @Test
-    void bottomSpikes() {
+    void oneLineBackwards() {
+    }
+
+    @Test
+    void topSpike() {
+
+        //Arrange
+        String[] expected = new String[3];
+        expected[0] = "   ";
+        expected[1] = "  \\/";
+        expected[2] = " \\\\//";
+
+        // Act
+        String[] actual = this.spikyClass.topSpikes();
+
+        // Assert
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void bottomSpike() {
     }
 }

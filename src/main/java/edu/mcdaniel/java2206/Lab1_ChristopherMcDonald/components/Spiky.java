@@ -83,7 +83,7 @@ public class Spiky {
     public String[] topSpikes() {
         int num = this.numberOfSpikes;
         String[] topLines = new String[num];
-        for (int i = 1; i < num; i++) {
+        for (int i = 0; i < num; i++) {
             topLines[i] = this.oneLineBackward(num - i, i);
         }
         return topLines;
@@ -108,7 +108,7 @@ public class Spiky {
             System.out.println(bottomSpikes[i - 1]);
         }
     }
-    public void showNSpikes(int num){
+    public void showSpikes(int num){
         String[] topSpikes = this.topSpikes();
         String[] bottomSpikes = this.bottomSpikes();
         for (int i = 0; i < num; i++) {

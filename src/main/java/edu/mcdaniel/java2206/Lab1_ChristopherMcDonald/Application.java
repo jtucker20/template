@@ -54,11 +54,8 @@ public class Application {
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
         Spiky spiky = new Spiky(10);
 
-        String[] topSpikes = spiky.topSpikes();
-        String[] bottomSpikes = spiky.bottomSpikes();
-
         spiky.showSpikes();
-        spiky.showNSpikes(8);
+        spiky.showSpikes(8);
 
         spiky.setNumberOfSpikes(5);
         spiky.showSpikes();
