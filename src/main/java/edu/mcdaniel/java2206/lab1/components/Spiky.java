@@ -89,6 +89,7 @@ public class Spiky {
             result = result + FORWARDSLASH;
         }
         for(int i + 0; i < numSpikes; i++){
+            result = result + BACKSLASH;
 
 
 
