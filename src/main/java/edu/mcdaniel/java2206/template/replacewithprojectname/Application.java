@@ -1,6 +1,6 @@
 package edu.mcdaniel.java2206.template.replacewithprojectname;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Example;
+import edu.mcdaniel.java2206.template.replacewithprojectname.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +19,9 @@ public class Application {
      * The logging mechanism of the class.
      */
     private Logger log;
-
+    //private int numberOfSpikes;
+   // public static final String BACKSLASH = "\\";
+   // public static final String FORWARDSLASH = "/";
 
     //=============================================================================================
     // Constructor(s)
@@ -56,17 +58,18 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Example exampleWithStandardGreeting = new Example();
 
-        Example exampleWithCustomGreeting = new Example()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
+        Spiky spiky = new Spiky(10);
+        String[] topSpikes = spiky.topSpikes();
 
+        System.out.println(spiky.oneLineBACKWARD(91,2));
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(exampleWithStandardGreeting.getMessage());
-
-        System.out.println(exampleWithCustomGreeting.getMessage());
-
+        System.out.println(" \\/ ");
+        System.out.println(" \\\\//");
+        System.out.println(" \\\\\\///");
+        System.out.println("///\\\\\\");
+        System.out.println(" //\\\\");
+        System.out.println(" /\\ ");
     }
 
 

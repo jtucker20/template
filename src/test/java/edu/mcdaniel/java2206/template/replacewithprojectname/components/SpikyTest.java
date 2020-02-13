@@ -5,19 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ExampleTest {
+class SpikyTest {
 
-    private Example exampleClass;
+    private Spiky exampleClass;
 
     @BeforeEach
     void setUp() {
 
-        exampleClass = new Example();
+        exampleClass = new Spiky();
 
     }
 
     @Test
-    void getMessage() {
+    void testSpaceFunctionality1sp2spk() {
 
         // Arrange
         String expected = "Hello World!";
