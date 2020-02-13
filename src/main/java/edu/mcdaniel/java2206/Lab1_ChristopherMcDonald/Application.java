@@ -58,7 +58,7 @@ public class Application {
         String[] bottomSpikes = spiky.bottomSpikes();
 
         spiky.showSpikes();
-        spiky.set
+        spiky.showNSpikes(8);
 
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS

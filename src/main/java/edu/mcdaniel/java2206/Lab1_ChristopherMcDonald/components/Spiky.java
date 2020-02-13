@@ -108,8 +108,15 @@ public class Spiky {
             System.out.println(bottomSpikes[i - 1]);
         }
     }
-    public String[] showNSpikes(){
-        String[] nTopSpikes = new
+    public void showNSpikes(int num){
+        String[] topSpikes = this.topSpikes();
+        String[] bottomSpikes = this.bottomSpikes();
+        for (int i = 0; i < num; i++) {
+            System.out.println(topSpikes[i]);
+        }
+        for (int i = num; i > 0; i--) {
+            System.out.println(bottomSpikes[i - 1]);
+        }
     }
 
 
