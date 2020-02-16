@@ -19,20 +19,16 @@ public class Spiky {
     /**
      * This provides access to logging.
      */
-
+    private final Logger log;
 
     /**
      * This String variable will hold the greeting.
      */
 
-    private int numberOfSpikes = 3;
+    private int numberOfSpikes;
     public static final String BACKSLASH = "\\";
     public static final String FORWARDSLASH = "/";
 
-    /**
-     * This String variable will hold the name of the audience.
-     */
-    private String audience;
 
 
     //=============================================================================================
@@ -43,56 +39,59 @@ public class Spiky {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-   // public Spiky() {
-        //this(3);
-    // }
+
+    public Spiky() { this(3); }
+
     public Spiky(int numberOfSpikes){
         this.numberOfSpikes = numberOfSpikes;
-       //  this.Log = LogManager.getLogger(this);
+        this.log = LogManager.getLogger(this);
 
-       //  this.debug("The number of spikes will be {}.", this.numberOfSpikes
+        log.debug("The number of spikes will be {}. ", this.numberOfSpikes);
     }
-
 
     //=============================================================================================
     // Major Methods
     //=============================================================================================
 
-    public String oneLine(int numSpaces, int numSpikes) {
-        String result = "";
-        for (int i = 0; i < numSpaces; i++) {
+    public String oneLineForward(int numSpaces, int numSpikes){
+        String result = " ";
+        for(int i = 0; i < numSpaces; i++){
             result = result + " ";
         }
-        for (int i = 0; i < numSpikes; i++) {
-            result = result + BACKSLASH;
-        }
-        for (int i = 0; i < numSpikes; i++) {
+        for(int i = 0; i < numSpikes; i++){
             result = result + FORWARDSLASH;
+        }
+        for(int i = 0; i < numSpikes; i++){
+            result = result + BACKSLASH;
         }
         return result;
     }
-     public String oneLineBackwards(int numSpaces, int numSpikes){
-        String result = "";
-        for(int i = 0; i < numSpaces; i++){
-           result = result + " ";
-        }
-        for(int i = 0; i < numSpikes; i++){
-            result = result + FORWARDSLASH;
-        }
-        for(int i = 0; i < numSpikes; i++){
-            result = result + BACKSLASH;
-        }
-        return result;
-     }
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
 
-    /**
-     * A method to get the message.
-     * @return a string of the message.
-     */
-    public String getMessage(){ return getGreeting() + " " + getAudience() + "!";
+    public String[] topSpike() {
+        String[] topLines = new String[this.numberOfSpikes];
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            int numSpaces = this.numberOfSpikes - i;
+            topLines[i] = oneLineForward(numSpaces - 1, i + 1);
+        }
+        return topLines;
+    }
+
+    public String[] bottomSpikes(){
+        String[] bottomLines = new String[this.numberOfSpikes];
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            int numSpikes = this.numberOfSpikes - i;
+            bottomLines[i] = oneLineForward(i, numSpikes);
+        }
+        return bottomLines;
+    }
+
+    public void showSpikes(int numberOfSpikes){
+        for(int i = 0; i < numberOfSpikes; i++){
+            System.out.println(this.oneLineForward(numberOfSpikes - i, i + 1));
+        }
+        for(int i = 0; i< numberOfSpikes; i++){
+            System.out.println(this.oneLineForward(i,numberOfSpikes - i));
+        }
     }
 
 
@@ -100,19 +99,8 @@ public class Spiky {
     // Getters and Setters
     //=============================================================================================
 
-     public String getGreeting() {
-        return greeting;
-    }
+    public int getNumberOfSpikes() { return numberOfSpikes;}
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
-    }
+    public void setNumberOfSpikes(int numberOfSpikes) { this.numberOfSpikes = numberOfSpikes;}
 
-    public String getAudience() {
-        return audience;
-    }
-
-    public void setAudience(String audience) {
-        this.audience = audience;
-    }
 }
