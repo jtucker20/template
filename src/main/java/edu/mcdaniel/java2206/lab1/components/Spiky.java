@@ -54,7 +54,21 @@ public class Spiky {
     //=============================================================================================
 
     public String oneLineForward(int numSpaces, int numSpikes){
-        String result = " ";
+        String result = "";
+        for(int i = 0; i < numSpaces; i++){
+            result = result + " ";
+        }
+        for(int i = 0; i < numSpikes; i++){
+            result = result + BACKSLASH;
+        }
+        for(int i = 0; i < numSpikes; i++){
+            result = result + FORWARDSLASH;
+        }
+        return result;
+    }
+
+    public String oneLineBackward(int numSpaces, int numSpikes){
+        String result = "";
         for(int i = 0; i < numSpaces; i++){
             result = result + " ";
         }
@@ -80,7 +94,7 @@ public class Spiky {
         String[] bottomLines = new String[this.numberOfSpikes];
         for(int i = 0; i < this.numberOfSpikes; i++){
             int numSpikes = this.numberOfSpikes - i;
-            bottomLines[i] = oneLineForward(i, numSpikes);
+            bottomLines[i] = oneLineBackward(i, numSpikes);
         }
         return bottomLines;
     }
