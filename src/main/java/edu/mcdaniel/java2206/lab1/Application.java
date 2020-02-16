@@ -56,9 +56,25 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
+
+        /*//==========================================================================================================//
+         * Step Eight of the Lab
+         *///=========================================================================================================//
+
         Spiky spiky = new Spiky();
 
-        Spiky exampleWithCustomGreeting = new Spiky();
+        spiky.setNumberOfSpikes(10);
+
+        spiky.showSpikes();
+
+        spiky.setNumberOfSpikes(0);
+
+        spiky.showSpikes();
+
+        spiky.showSpikes();
+
+        spiky.showSpikes(10);
+
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
         /*//==========================================================================================================//
@@ -91,24 +107,8 @@ public class Application {
         System.out.println("C     C   O    O    L       L       I       N    N N");
         System.out.println(" CCCCC     OOOO     LLLLL  LLLLL  IIIII     N     NN");
 
-        System.out.println(spiky.getMessage());
 
-        System.out.println(exampleWithCustomGreeting.getMessage());
 
     }
-
-
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
-
-    //No minor methods made for this class
-
-
-    //=============================================================================================
-    // Getters and Setters
-    //=============================================================================================
-
-    //No private assets we want to expose in this class
 
 }
