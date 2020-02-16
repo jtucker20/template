@@ -76,7 +76,7 @@ public class Spiky {
         return topLines;
     }
 
-    public String[] bottomSpikes(){
+    public String[] bottomSpike(){
         String[] bottomLines = new String[this.numberOfSpikes];
         for(int i = 0; i < this.numberOfSpikes; i++){
             int numSpikes = this.numberOfSpikes - i;
@@ -91,6 +91,19 @@ public class Spiky {
         }
         for(int i = 0; i< numberOfSpikes; i++){
             System.out.println(this.oneLineForward(i,numberOfSpikes - i));
+        }
+    }
+
+    public void showSpikes(){
+
+        String[] topSpikes = this.topSpike();
+        String[] bottomSpikes = this.bottomSpike();
+
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            System.out.println(topSpikes[i]);
+        }
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            System.out.println(bottomSpikes[i]);
         }
     }
 

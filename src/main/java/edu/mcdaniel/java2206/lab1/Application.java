@@ -78,20 +78,23 @@ public class Application {
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
         /*//==========================================================================================================//
-        * Step One of the Lab
+        * Step One of the Lab, Commented out to save space
         *///==========================================================================================================//
 
+        /*
         System.out.println("  \\/  ");
         System.out.println(" \\\\// ");
         System.out.println("\\\\\\///");
         System.out.println("///\\\\\\");
         System.out.println(" //\\\\");
         System.out.println("  /\\  ");
+        */
 
         /*//==========================================================================================================//
-        * Step Two of the Lab, Example name "Misp"
+        * Step Two of the Lab, Example name "Misp" and Collin, commmented out to save space
         *///==========================================================================================================//
 
+        /*
         System.out.println("M     M    IIIII     SSSSS     PPPPPP");
         System.out.println("MM   MM      I      S     S    P     P");
         System.out.println("M M M M      I      S          P     P");
@@ -106,6 +109,9 @@ public class Application {
         System.out.println("C         O    O    L       L       I       N   N  N");
         System.out.println("C     C   O    O    L       L       I       N    N N");
         System.out.println(" CCCCC     OOOO     LLLLL  LLLLL  IIIII     N     NN");
+
+
+         */
 
 
 
