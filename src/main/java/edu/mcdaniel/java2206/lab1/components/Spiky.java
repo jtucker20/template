@@ -104,7 +104,7 @@ public class Spiky {
             System.out.println(this.oneLineForward(numberOfSpikes - i, i + 1));
         }
         for(int i = 0; i< numberOfSpikes; i++){
-            System.out.println(this.oneLineForward(i,numberOfSpikes - i));
+            System.out.println(this.oneLineBackward(i,numberOfSpikes - i));
         }
     }
 
