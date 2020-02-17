@@ -106,13 +106,15 @@ public class Spiky {
         this.numberOfSpikes = numberOfSpikes;
     }
 
-    public String[] topSpike() {
+    public String[] topSpikes() {
         String[] topLines = new String[this.numberOfSpikes];
-        for(int i = 0 ; i < this.numberOfSpikes; i++) {
+        for (int i = 0; i < this.numberOfSpikes; i++) {
             int numSpace = this.numberOfSpikes - i;
             topLines[i] = oneLineForward(numSpace, i);
         }
-        public String[] bottomSpike(){
+        return topLines;
+    }
+    public String[] bottomSpike() {
             String[] bottomLines = new String[this.numberOfSpikes];
             for(int i = 0; i < this.numberOfSpikes; i++) {
                 int numSpike= this.numberOfSpikes - i;
@@ -129,6 +131,4 @@ public class Spiky {
         // Getters and Setters
         //=============================================================================================
 
-
-    }
 }
