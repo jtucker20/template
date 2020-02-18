@@ -60,28 +60,7 @@ public class Spiky
     // Major Methods
     //=============================================================================================
 
-    /**
-     * This single argument method is designed to initialize the greeting to the value
-     * supplied in the customGreeting variable.
-     * @param customGreeting the custom greeting to be used.
-     * @return the Lab1Class object to allow chaining.
-     */
-    public Spiky withGreeting(String customGreeting)
-    {
 
-        this.greeting = customGreeting;
-
-        log.debug("The greeting was changed to: {}", this.greeting);
-
-        return this;
-    }
-
-    /**
-     * This single argument method is designed to initialize the audience to the value
-     * supplied in the customAudience variable.
-     * @param customAudience the custom audience who will be addressed
-     * @return the Lab1Class object to allow chaining.
-     */
     public Spiky withAudience(String customAudience)
     {
 
@@ -122,41 +101,33 @@ public class Spiky
         return result;
     }
 
-    public void showSpikes
+    public String[] topSpike()
     {
-
-
-
-
-
+        
     }
 
-
-
-
-    public int getNumberOfSpikes
+    public void showSpikes(int numberOfSpikes)
     {
-        return numberOfSpikes;
+        for(int i = 0; i < numberOfSpikes; i++)
+            System.out.println(this.oneLineForward(numberOfSpikes - 1, i +1));
+        for(int i = 0; i < numberOfSpikes; i++)
+            System.out.println(this.oneLineForward(i,numberOfSpikes - i));
     }
-
-    public void setNumberOfSpikes
-    {
-        this.numberOfSpikes = numberOfSpikes;
-    }
-
-
 
     //=============================================================================================
     // Getters and Setters
     //=============================================================================================
 
-    public String getGreeting() {
-        return greeting;
+    public int getNumberOfSpikes()
+    {
+        return numberOfSpikes;
     }
 
-    public void setGreeting(String greeting) {
-        this.greeting = greeting;
+    public void setNumberOfSpikes(int numberOfSpikes)
+    {
+        this.numberOfSpikes = numberOfSpikes;
     }
+
 
     public String getAudience() {
         return audience;
