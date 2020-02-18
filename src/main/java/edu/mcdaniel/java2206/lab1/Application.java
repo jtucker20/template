@@ -56,11 +56,8 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Spiky exampleWithStandardGreeting = new Spiky();
+        Spiky spiky = new Spiky();
 
-        Spiky exampleWithCustomGreeting = new Spiky()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
 
@@ -72,9 +69,6 @@ public class Application {
 
 
 
-        System.out.println(exampleWithStandardGreeting.getMessage());
-
-        System.out.println(exampleWithCustomGreeting.getMessage());
 
     }
 

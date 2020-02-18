@@ -23,7 +23,7 @@ class SpikyTest {
         String expected = "Hello World!";
 
         // Act
-        String actual = exampleClass.getMessage();
+        String actual = "exampleClass.getMessage();";
 
         // Assert
         assertEquals(expected, actual);
