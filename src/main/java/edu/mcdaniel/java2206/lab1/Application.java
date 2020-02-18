@@ -33,18 +33,6 @@ public class Application {
         //This is an implemented No Argument Constructor.
     }
 
-
-    //=============================================================================================
-    // Major Methods
-    //=============================================================================================
-
-    //No major methods to implement
-
-
-    //=============================================================================================
-    // PSVM
-    //=============================================================================================
-
     /**
      * This method actually accomplishes the running of the code we are seeking to write
      * @param args the input from the command line.
@@ -58,14 +46,7 @@ public class Application {
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
         Spiky exampleWithStandardGreeting = new Spiky();
 
-        Spiky exampleWithCustomGreeting = new Spiky()
-                .withGreeting("Greetings")
-                .withAudience("Earthlings");
-
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(exampleWithStandardGreeting.getMessage());
-
-        System.out.println(exampleWithCustomGreeting.getMessage());
 
         System.out.println("  \\/  ");
         System.out.println(" \\\\// ");
@@ -86,24 +67,13 @@ public class Application {
 
         spiky.showSpikes(10);
 
-
-
-
+        System.out.println("       A        B B B    B B B    Y       Y");
+        System.out.println("      A A       B     B  B     B   Y     Y");
+        System.out.println("     A   A      B    B   B    B     Y   Y");
+        System.out.println("    AAAAAAA     B B B    B B B       YYY");
+        System.out.println("   A       A    B    B   B    B       Y");
+        System.out.println("  A         A   B     B  B     B      Y");
+        System.out.println(" A           A  B B B    B B B        Y");
 
     }
-
-
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
-
-    //No minor methods made for this class
-
-
-    //=============================================================================================
-    // Getters and Setters
-    //=============================================================================================
-
-    //No private assets we want to expose in this class
-
 }

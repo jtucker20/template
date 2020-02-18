@@ -7,25 +7,60 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SpikyTest {
 
-    private Spiky exampleClass;
+    private Spiky spikyClass;
 
     @BeforeEach
-    void setUp() {
+    void setUp()
+    {
 
-        exampleClass = new Spiky();
+        spikyClass = new Spiky();
 
     }
 
     @Test
-    void getMessage() {
+    void testSpaceFunctionality()
+    {
 
         // Arrange
-        String expected = "Hello World!";
+        String expected = "   ";
 
         // Act
-        String actual = exampleClass.getMessage();
+        String actual = spikyClass.oneLineForward(3, 0);
 
         // Assert
         assertEquals(expected, actual);
     }
+
+    @Test
+    void topSpike()
+    {
+        //Arrange
+        String[] expected = new String[3];
+        expected[0] = "  \\/";
+        expected[1] = " \\\\//";
+        expected[2] = "\\\\\\///";
+
+        //Act
+        String[] actual = this.spikyClass.topSpike();
+
+        //Assert
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void bottomSpike()
+    {
+        //Arrange
+        String[] expected = new String[3];
+        expected[0] = "///\\\\\\";
+        expected[1] = " //\\\\ ";
+        expected[2] = "  /\\  ";
+
+        //Act
+        String[] actual = this.spikyClass.bottomSpike();
+
+        //Assert
+        assertArrayEquals(expected, actual);
+    }
+
 }
