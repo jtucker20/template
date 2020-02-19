@@ -1,6 +1,7 @@
 package edu.mcdaniel.java2206.lab1JoelAfata.components;
 
-import edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky;
+//import edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky;
+import edu.mcdaniel.java2206.template.replacewithprojectname.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,9 +20,9 @@ public class Application {
      * The logging mechanism of the class.
      */
     private Logger log;
-    //private int numberOfSpikes;
-   // public static final String BACKSLASH = "\\";
-   // public static final String FORWARDSLASH = "/";
+    private int numberOfSpikes;
+    public static final String BACKSLASH = "\\";
+    public static final String FORWARDSLASH = "/";
 
     //=============================================================================================
     // Constructor(s)
@@ -59,8 +60,11 @@ public class Application {
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
 
-        edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky spiky = new edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky(10);
+       // edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky spiky = new edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky(10);
+        Spiky spiky = new Spiky(10);
         String[] topSpikes = spiky.topSpike();
+        String[] bottomSpikes = spiky.bottomSpike();
+        for()
 
         System.out.println(spiky.oneLineBackwards(91,2));
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS

@@ -19,9 +19,9 @@ public class Application {
      * The logging mechanism of the class.
      */
     private Logger log;
-    //private int numberOfSpikes;
-   // public static final String BACKSLASH = "\\";
-   // public static final String FORWARDSLASH = "/";
+    private int numberOfSpikes;
+    public static final String BACKSLASH = "\\";
+   public static final String FORWARDSLASH = "/";
 
     //=============================================================================================
     // Constructor(s)
@@ -60,9 +60,9 @@ public class Application {
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
 
         Spiky spiky = new Spiky(10);
-        String[] topSpikes = spiky.topSpikes();
+        String[] topSpikes = spiky.topSpike();
 
-        System.out.println(spiky.oneLineBACKWARD(91,2));
+        System.out.println(spiky.oneLineBackwards(91,2));
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
         System.out.println(" \\/ ");
         System.out.println(" \\\\//");
