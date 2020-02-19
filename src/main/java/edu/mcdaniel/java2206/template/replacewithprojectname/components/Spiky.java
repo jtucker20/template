@@ -24,16 +24,11 @@ public class Spiky {
     /**
      * This String variable will hold the greeting.
      */
+
     private int numberOfSpikes;
     public static final String BACKSLASH = "\\";
     public static final String FORWARDSLASH = "/";
 
-    // private String greeting;
-
-    /**
-     * This String variable will hold the name of the audience.
-     */
-    // private String audience;
 
 
     //=============================================================================================
@@ -44,59 +39,97 @@ public class Spiky {
      * This No Argument constructor is designed to initialize the greeting to the standard
      * "Hello World."
      */
-    public Spiky() {
-        //this(numberOfSpikes 3);
-        this.numberOfSpikes = 3;
-
-        this.log = LogManager.getLogger(this);
-
-        log.debug("The output message is {} {}!", this.numberOfSpikes);
+    public Spiky(){
+        this(3);
     }
 
+    public  Spiky(int numberOfSPikes){
+        this.numberOfSpikes = numberOfSPikes;
+        this.log = LogManager.getLogger(this);
+
+        log.debug("The number of spikes will be {}. ", this.numberOfSpikes);
+    }
 
     //=============================================================================================
     // Major Methods
     //=============================================================================================
 
-    public Spiky(int numberOfSpikes) {
-        this();
-        this.numberOfSpikes = numberOfSpikes;
-
-        log.debug("The numner of spikes will be {}", this.numberOfSpikes);
-    }
-
-
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
-
-    public String oneLineForward(int numSpaces, int numSpikes) {
+    public String oneLineForward(int numSpaces, int numSpikes){
         String result = "";
-        for (int i = 0; i < numSpaces; i++) {
+        for(int i = 0; i < numSpaces; i++){
             result = result + " ";
         }
-        for (int i = 0; i < numSpikes; i++) {
+        for(int i =0; i < numSpikes; i++){
             result = result + BACKSLASH;
         }
-        for (int i = 0; i < numSpikes; i++) {
+        for(int i = 0; i < numSpikes; i++){
             result = result + FORWARDSLASH;
         }
         return result;
     }
 
-    public String oneLineBACKWARD(int numSpaces, int numSpikes) {
+    public String oneLineBackwards(int numSpaces, int numSpikes){
         String result = "";
-        for (int i = 0; i < numSpaces; i++) {
+        for(int i = 0; i < numSpaces; i++){
             result = result + " ";
         }
-        for (int i = 0; i < numSpikes; i++) {
+        for(int i = 0; i < numSpikes; i++){
             result = result + FORWARDSLASH;
         }
-        for (int i = 0; i < numSpikes; i++) {
+        for(int i = 0; i < numSpikes; i++){
             result = result + BACKSLASH;
         }
         return result;
     }
+
+    public String[] topSpike() {
+        String[] topLines = new String[this.numberOfSpikes];
+        for (int i = 0; i < this.numberOfSpikes; i++) {
+            int numSpace = this.numberOfSpikes - i;
+            topLines[i] = oneLineForward(numSpace - 1, i + 1);
+        }
+        return topLines;
+    }
+
+    public String[] bottomSpike(){
+        String[] bottomLines = new String[this.numberOfSpikes];
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            int numSpikes = this.numberOfSpikes - i;
+            bottomLines[i] = oneLineBackwards(i, numSpikes);
+        }
+
+        return bottomLines;
+    }
+
+    public void showSpikes(){
+
+        String[] topSpikes = this.topSpike();
+        String[] bottomSpikes = this.bottomSpike();
+
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            System.out.println(topSpikes[i]);
+        }
+        for(int i = 0; i < this.numberOfSpikes; i++){
+            System.out.println(bottomSpikes[i]);
+        }
+    }
+
+    public void showSpikes(int numberOfSpikes) {
+
+        for(int i = 0; i < numberOfSpikes; i++){
+            System.out.println(this.oneLineForward(numberOfSpikes - i, i + 1));
+        }
+        for(int i = 0; i < numberOfSpikes; i++){
+            System.out.println(this.oneLineBackwards(i, numberOfSpikes - i));
+        }
+
+    }
+
+
+    //=============================================================================================
+    // Getters and Setters
+    //=============================================================================================
+
 
     public int getNumberOfSpikes() {
         return numberOfSpikes;
@@ -105,30 +138,5 @@ public class Spiky {
     public void setNumberOfSpikes(int numberOfSpikes) {
         this.numberOfSpikes = numberOfSpikes;
     }
-
-    public String[] topSpikes() {
-        String[] topLines = new String[this.numberOfSpikes];
-        for (int i = 0; i < this.numberOfSpikes; i++) {
-            int numSpace = this.numberOfSpikes - i;
-            topLines[i] = oneLineForward(numSpace, i);
-        }
-        return topLines;
-    }
-    public String[] bottomSpike() {
-            String[] bottomLines = new String[this.numberOfSpikes];
-            for(int i = 0; i < this.numberOfSpikes; i++) {
-                int numSpike= this.numberOfSpikes - i;
-                bottomLines[i] = oneLineBACKWARD(i, numSpike);
-            }
-            return bottomLines;
-        }
-
-        //public String getMessage(){
-        // return getGreeting() + " " + getAudience() + "!";
-
-
-        //=============================================================================================
-        // Getters and Setters
-        //=============================================================================================
 
 }
