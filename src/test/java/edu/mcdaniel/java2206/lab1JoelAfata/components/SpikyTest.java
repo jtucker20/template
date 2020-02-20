@@ -37,9 +37,9 @@ class SpikyTest {
 
         //Arrange
         String[] expected = new String[3];
-        expected[2] = "///\\\\\\";
+        expected[0] = "///\\\\\\";
         expected[1] = " //\\\\";
-        expected[0] = "  /\\";
+        expected[2] = "  /\\";
 
         // Act
         String[] actual = this.spikyClass.bottomSpike();
@@ -47,16 +47,41 @@ class SpikyTest {
         // Assert
         assertArrayEquals(expected, actual);
     }
-}
+
     @Test
- void testSpaceFunctionality1spspk() {
+ void testSpaceFunctionality1spikes4() {
 
         // Arrange
-        String expected = "\\\\\\///";
+        String expected = " \\\\\\\\////";
 
         // Act
-        String actual = spikyClass.oneLineForward(0,3);
+        String actual = spikyClass.oneLineForward(1,4);
 
         // Assert
         assertEquals(expected, actual);
         }
+    @Test
+    void testSpaceFunctionality4spikes8() {
+
+        // Arrange
+        String expected = "    ////////\\\\\\\\\\\\\\\\";
+
+        // Act
+        String actual = spikyClass.oneLineBackwards(4,8);
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+    @Test
+    void testSpaceFunctionality10spike10() {
+
+        // Arrange
+        String expected = "          \\\\\\\\\\\\\\\\\\\\//////////";
+
+        // Act
+        String actual = spikyClass.oneLineForward(10,10);
+
+        // Assert
+        assertEquals(expected, actual);
+    }
+}
