@@ -48,14 +48,15 @@ class SpikyTest {
         assertArrayEquals(expected, actual);
     }
 }
-//    @Test
-//    void testSpaceFunctionality1sp2spk() {
+    @Test
+ void testSpaceFunctionality1spspk() {
 
-//        // Arrange
-//        String expected = "Hello World!";
-//
-//        // Act
-//        String actual = exampleClass.getMessage();
-//
-//        // Assert
-//        assertEquals(expected, actual);
+        // Arrange
+        String expected = "\\\\\\///";
+
+        // Act
+        String actual = spikyClass.oneLineForward(0,3);
+
+        // Assert
+        assertEquals(expected, actual);
+        }
