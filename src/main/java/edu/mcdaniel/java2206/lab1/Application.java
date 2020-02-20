@@ -61,10 +61,16 @@ public class Application {
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
 
-//      System.out.println("  \\/  ");
-        System.out.println("  \\\\//");
-        System.out.println("\\\\///");
+       // String[] topSpikes = spiky.topSpikes();
+        //String[] bottomSpikes = spiky.bottomSpikes;
+
+        System.out.println("  \\/  ");
+        System.out.println(" \\\\//");
+        System.out.println("\\\\\\///");
         System.out.println("///\\\\\\");
+        System.out.println(" //\\\\ ");
+        System.out.println("  /\\  ");
+
 
 
 
