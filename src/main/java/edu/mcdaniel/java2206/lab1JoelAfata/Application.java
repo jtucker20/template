@@ -1,6 +1,6 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname;
+package edu.mcdaniel.java2206.lab1JoelAfata;
 
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Spiky;
+import edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

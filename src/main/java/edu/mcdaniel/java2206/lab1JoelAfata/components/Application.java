@@ -1,7 +1,6 @@
 package edu.mcdaniel.java2206.lab1JoelAfata.components;
 
 //import edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky;
-import edu.mcdaniel.java2206.template.replacewithprojectname.components.Spiky;
 import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -63,17 +62,22 @@ public class Application {
        // edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky spiky = new edu.mcdaniel.java2206.lab1JoelAfata.components.Spiky(10);
         Spiky spiky = new Spiky(10);
         String[] topSpikes = spiky.topSpike();
+        for(int i = 0; i<10; i++)
+            System.out.println(topSpikes[i]);
+
         String[] bottomSpikes = spiky.bottomSpike();
-        for()
+        for(int i = 0; i<10; i++) {
+            System.out.println(bottomSpikes[i]);
+        }
 
         System.out.println(spiky.oneLineBackwards(91,2));
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
-        System.out.println(" \\/ ");
-        System.out.println(" \\\\//");
+        System.out.println("   \\/ ");
+        System.out.println("  \\\\//");
         System.out.println(" \\\\\\///");
-        System.out.println("///\\\\\\");
-        System.out.println(" //\\\\");
-        System.out.println(" /\\ ");
+        System.out.println(" ///\\\\\\");
+        System.out.println("  //\\\\");
+        System.out.println("   /\\ ");
     }
 
 

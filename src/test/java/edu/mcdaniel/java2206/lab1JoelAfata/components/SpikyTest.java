@@ -1,4 +1,4 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1JoelAfata.components;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,13 +19,13 @@ class SpikyTest {
     @Test
     void testSpaceFunctionality1sp2spk() {
 
-        // Arrange
-        String expected = "Hello World!";
-
-        // Act
-        String actual = exampleClass.getMessage();
-
-        // Assert
-        assertEquals(expected, actual);
+//        // Arrange
+//        String expected = "Hello World!";
+//
+//        // Act
+//        String actual = exampleClass.getMessage();
+//
+//        // Assert
+//        assertEquals(expected, actual);
     }
 }

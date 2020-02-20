@@ -1,4 +1,4 @@
-package edu.mcdaniel.java2206.template.replacewithprojectname.components;
+package edu.mcdaniel.java2206.lab1JoelAfata.components;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -116,9 +116,15 @@ public class Spiky {
 
     public void showSpikes(int numberOfSpikes) {
 
-        for(int i = 0; i < numberOfSpikes; i++){
-            System.out.println(this.oneLineForward(numberOfSpikes - i, i + 1));
+        String[] topLines = new String[this.numberOfSpikes];
+        for (int i = 0; i < this.numberOfSpikes; i++) {
+            int numSpace = this.numberOfSpikes - i;
+            System.out.println(oneLineForward(numSpace - 1, i + 1));
         }
+//        for(int i = 0; i < numberOfSpikes; i++){
+//            String forwardSpikes = this.oneLineForward(numberOfSpikes - i, i + 1);
+//            System.out.println(forwardSpikes);
+//        }
         for(int i = 0; i < numberOfSpikes; i++){
             System.out.println(this.oneLineBackwards(i, numberOfSpikes - i));
         }
