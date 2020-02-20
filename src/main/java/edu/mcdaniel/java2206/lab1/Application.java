@@ -56,7 +56,15 @@ public class Application {
 
         //===// User Defined Behavior //=========================================================//
         //TODO: INSTANTIATE YOUR APPLICATION'S PRIMARY CLASS
-        Spiky spiky = new Spiky();
+        Spiky spiky = new Spiky( 10);
+        String[] topSpikes = spiky.topSpike();
+        for(int i = 0; i<10; i++)
+            System.out.println(topSpikes[i]);
+
+        String[] bottomSpikes = spiky.bottomSpike();
+        for (int i = 0; i<10; i++) {
+            System.out.println(bottomSpikes[i]);
+        }
 
 
         //TODO: CALL YOUR APPLICATION'S PRIMARY CLASS METHODS
