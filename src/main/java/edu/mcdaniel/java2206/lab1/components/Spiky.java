@@ -71,11 +71,6 @@ public class Spiky
         return this;
     }
 
-
-    //=============================================================================================
-    // Minor Methods(s)
-    //=============================================================================================
-
     public String oneLineForward(int numSpaces, int numSpikes)
     {
         String result = "";
@@ -155,7 +150,6 @@ public class Spiky
     {
         this.numberOfSpikes = numberOfSpikes;
     }
-
 
     public String getAudience() {
         return audience;
