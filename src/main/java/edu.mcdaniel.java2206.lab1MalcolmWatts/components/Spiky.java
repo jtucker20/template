@@ -34,11 +34,10 @@ public class Spiky {
     //=============================================================================================
 
     public Spiky(){
-        this(numberOfSpikes; 3);
+        this( 3);
     }
 
     public Spiky(int numberOfSpikes){
-        this();
         this.numberOfSpikes = 3;
 
 
@@ -117,10 +116,10 @@ public class Spiky {
 
     public void showSpikes(int numberOfSpikes){
         for(int i = 0; i <= numberOfSpikes; ++i){
-            System.out.println(this.oneLineForward(numSpaces; numberOfSpikes - i, numSpikes; i+1));
+            System.out.println(this.oneLineForward( numberOfSpikes - i,  i+1));
         }
         for(int i = 0; i <= numberOfSpikes; ++i){
-            System.out.println(this.oneLineBackwards(i ,numSpikes; numberOfSpikes - i));
+            System.out.println(this.oneLineBackwards(i , numberOfSpikes - i));
         }
     }
 
